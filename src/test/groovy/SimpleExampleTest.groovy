@@ -4,7 +4,10 @@ import static org.junit.Assert.assertTrue;
 import org.gradle.api.Project;
 import org.gradle.testfixtures.ProjectBuilder;
 
-class SimpleExampleTest {
+public class SimpleExampleTest {
+  SimpleExampleTest() {
+    // nothing to do
+  }
   @Test
   public void boo() {
     Project project = ProjectBuilder.builder().build();

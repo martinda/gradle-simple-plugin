@@ -11,11 +11,4 @@ repositories {
 
 dependencies {
   compile gradleApi()
-
-  testCompile gradleTestKit()
-  testCompile('org.spockframework:spock-core:1.0-groovy-2.4') {
-    // Need to exclude else it takes groovy 2.4.1, and it clashes with 2.4.4
-    exclude group: 'org.codehaus.groovy', module: 'groovy-all'
-  }
-  testCompile 'org.codehaus.groovy:groovy:2.4.4'
 }

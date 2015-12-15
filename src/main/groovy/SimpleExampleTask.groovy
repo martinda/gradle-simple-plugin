@@ -1,12 +1,13 @@
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.TaskAction;
 
-class SimpleExampleTask extends DefaultTask {
+public class SimpleExampleTask extends DefaultTask {
 
-  static final String NAME = "simpleExample";
+  public static final String NAME = "simpleExample";
 
-  // Change "name" in the next line to anything else and it passes
-  String name1 = "John";
+  // Change "name" to "name1" and the test passes
+  // Or declare the next line as public String name and the test passes
+  String name;
 
   @TaskAction
   void run() {
