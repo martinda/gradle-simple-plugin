@@ -35,7 +35,7 @@ class SimpleExampleTest extends Specification {
         when:
         def result = GradleRunner.create()
             .withProjectDir(testProjectDir.root)
-            .withArguments('tasks')
+            .withArguments('simpleExample')
             .withPluginClasspath(pluginClasspath)
             .build()
 

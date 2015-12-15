@@ -7,6 +7,7 @@ class SimpleExampleTask extends DefaultTask {
 
   static final NAME = 'simpleExample'
 
+  // Change "name" in the next line to anything else and it passes
   String name = 'defaultName'
 
   SimpleExampleTask() {

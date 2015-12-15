@@ -1,6 +1,5 @@
 plugins {
   id 'groovy' 
-  id 'maven-publish'
 }
 
 sourceCompatibility = 1.8
