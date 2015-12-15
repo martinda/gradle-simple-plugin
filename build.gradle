@@ -5,9 +5,6 @@ plugins {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-group   = 'org.martinda.gradle.plugins'
-version = '1.0.0'
-
 repositories {
   mavenCentral()
 }
@@ -22,24 +19,3 @@ dependencies {
   }
   testCompile 'org.codehaus.groovy:groovy:2.4.4'
 }
-
-// Gradle 2.9 hack begins (since Gradle 2.6)
-// Write the plugin's classpath to a file to share with the tests
-task createClasspathManifest {
-    def outputDir = file("$buildDir/$name")
-
-    inputs.files sourceSets.main.runtimeClasspath
-    outputs.dir outputDir
-
-    doLast {
-        outputDir.mkdirs()
-        file("$outputDir/plugin-classpath.txt").text = sourceSets.main.runtimeClasspath.join("\n")
-    }
-}
-
-// Add the classpath file to the test runtime classpath
-dependencies {
-    testRuntime files(createClasspathManifest)
-}
-// Gradle 2.9 hack ends
-
