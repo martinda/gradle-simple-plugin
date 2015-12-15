@@ -10,6 +10,6 @@ class SimpleExampleTask extends DefaultTask {
 
   @TaskAction
   void run() {
-    println("Hello "+name)
+    println("Hello")
   }
 }

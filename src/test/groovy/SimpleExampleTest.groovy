@@ -8,7 +8,7 @@ class SimpleExampleTest {
   @Test
   public void boo() {
     Project project = ProjectBuilder.builder().build()
-    project.pluginManager.apply 'org.martinda.simple-example'
+    project.pluginManager.apply 'simple-example'
     assertTrue(project.tasks.simpleExample instanceof SimpleExampleTask)
   }
 }
