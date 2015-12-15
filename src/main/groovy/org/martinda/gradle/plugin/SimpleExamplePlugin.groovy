@@ -6,6 +6,6 @@ import org.gradle.api.Task
 
 class SimpleExamplePlugin implements Plugin<Project> {
   void apply(Project project) {
-    Task task = project.tasks.create(SimpleExampleTask.NAME, SimpleExampleTask)
+    Task task = project.tasks.create(SimpleExampleTask.NAME, SimpleExampleTask.class)
   }
 }
